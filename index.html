@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+            <input id="screen" type="text" name="display" readonly>
+            </div>
+            <div id="working">
+                <div>
+                    <button onclick="e()">e</button>
+                    <button onclick="pi()">π</button>
+                    <button class="btn">%</button>
+                    <button class="orange revin" onclick="screen.value=screen.value.substr(0,screen.value.length-1);working.value=working.value.substr(0,working.value.length-1);if (btn_revin.value!='') btn_revin.value=btn_revin.value.substr(0,btn_revin.value.length-1)">DEL</button>
+                    <button class="orange revin" onclick="screen.value=working.value=btn_revin.value=''">AC</button>
+                </div>
+                <div>
+                    <button id="sinButton" onclick="sin()">sin</button>
+                    <button id="cosButton" onclick="cos()">cos</button>
+                    <button id="tanButton" onclick="tan()">tan</button>
+                    <button onclick="hyp()">hyp</button>
+                    <button class="btn">exp</button>
+                </div>
+                <div>
+                    <button class="btn">x²</button>
+                    <button class="btn">x³</button>
+                    <button class="btn">∛</button>
+                    <button class="btn">√</button>
+                    <button class="btn">^</button>
+                </div>
+                <div>
+                    <button onclick="log()">log</button>
+                    <button onclick="ln()">ln</button>
+                    <button class="btn">(</button>
+                    <button class="btn">)</button>
+                    <button class="btn">÷</button>
+                </div>
+                <div>
+                    <button class="btn green">7</button>
+                    <button class="btn green">8</button>
+                    <button class="btn green">9</button>
+                    <button onclick="fact()">x!</button>
+                    <button class="btn">×</button>
+                </div>
+                <div>
+                    <button class="btn green">4</button>
+                    <button class="btn green">5</button>
+                    <button class="btn green">6</button>
+                    <button onclick="inv()">1/x</button>
+                    <button class="btn">-</button>
+                </div>
+                <div>
+                    <button class="btn green">1</button>
+                    <button class="btn green">2</button>
+                    <button class="btn green">3</button>
+                    <button onclick="modulus()">|x|</button>
+                    <button class="btn">+</button>
+                </div>
+                <div>
+                    <button class="btn">.</button>
+                    <button class="btn green">0</button>
+                    <button onclick="negate()">±</button>
+                    <button onclick="approx()">≈</button>
+                    <button class="btn grey" onclick="screen.value=(working.value)">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./js/script.js"></script>
+</html>
